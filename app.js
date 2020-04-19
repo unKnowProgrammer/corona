@@ -17,7 +17,7 @@ app.get("/" , (req , res) => {
 		}
 	}).then(response => {
 		total = response.data.result;
-		res.render("index" , {
+		res.render("index.ejs" , {
 			totalCases : total.totalCases,
 			totalDeaths : total.totalDeaths,
 			activeCases : total.activeCases,
