@@ -11,7 +11,7 @@ var data;
 var total;
 app.get("/" , (req , res) => {
 	
-	res.send(header);
+	res.render("test" , {data : "Merhaba Dünya"});
 		
 })
 
