@@ -11,25 +11,7 @@ var data;
 var total;
 app.get("/" , (req , res) => {
 	
-	axios.get("https://api.collectapi.com/corona/totalData" , {
-		headers : {
-			authorization: "apikey 49IHyG0NKyBbydz6hZ9YAN:4MnYcl5y7F2G7I6tpYvpVs"
-		}
-	}).then(response => {
-		total = response.data.result;
-		res.render("index.ejs" , {
-			totalCases : total.totalCases,
-			totalDeaths : total.totalDeaths,
-			activeCases : total.activeCases,
-			Recovered : total.totalRecovered,
-			newCases : total.newCases,
-			newDeaths : total.newDeaths,
-			header : header
-
-		})
-	}).catch(err => {
-		console.log("HATA : " + err)
-	})
+	res.send(header);
 		
 })
 
